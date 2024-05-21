@@ -4,20 +4,10 @@ import "./styles.css";
 type HeroCardProps = {
   id: string;
   superhero: string;
-  publisher: string;
   alter_ego: string;
-  first_appearance: string;
-  characters: string;
 };
 
-export const HeroCard = ({
-  id,
-  superhero,
-  publisher,
-  alter_ego,
-  first_appearance,
-  characters,
-}: HeroCardProps) => {
+export const HeroCard = ({ id, superhero, alter_ego }: HeroCardProps) => {
   const imageUrl: string = `/assets/heroes/${id}.jpg`;
 
   return (
