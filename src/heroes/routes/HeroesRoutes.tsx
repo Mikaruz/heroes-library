@@ -1,11 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-
-import { NavBar } from "../../ui/components/NavBar";
-import { Home } from "../../ui/pages/Home";
-import { Marvel } from "../pages/Marvel";
-import { Dc } from "../pages/Dc";
-import { Search } from "../pages/Search";
-import { Hero } from "../pages/Hero";
+import { Home, NavBar } from "../../ui";
+import { DcPage, HeroPage, MarvelPage, SearchPage } from "../pages";
 
 export const HeroesRoutes = () => {
   return (
@@ -13,10 +8,10 @@ export const HeroesRoutes = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/marvel" element={<Marvel />} />
-        <Route path="/dc" element={<Dc />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/hero/:id" element={<Hero />} />
+        <Route path="/marvel" element={<MarvelPage />} />
+        <Route path="/dc" element={<DcPage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/hero/:id" element={<HeroPage />} />
       </Routes>
     </>
   );

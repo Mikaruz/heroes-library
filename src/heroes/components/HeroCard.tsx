@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./styles.css";
+import "./HeroCard.css";
 
 type HeroCardProps = {
   id: string;
@@ -11,12 +11,12 @@ export const HeroCard = ({ id, superhero, alter_ego }: HeroCardProps) => {
   const imageUrl: string = `/assets/heroes/${id}.jpg`;
 
   return (
-    <div className="card">
+    <div className="hero-card">
       <Link to={`/hero/${id}`}>
-        <img src={imageUrl} alt={id} />
+        <img className="hero-image" src={imageUrl} alt={id} />
       </Link>
-      <h2>{superhero}</h2>
-      <h3>{alter_ego}</h3>
+      <h2 className="hero-name">{superhero}</h2>
+      <h3 className="hero-subname">{alter_ego}</h3>
     </div>
   );
 };

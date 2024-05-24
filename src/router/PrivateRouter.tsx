@@ -1,9 +1,12 @@
-import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { AuthContext } from "../auth/context/AuthContext";
+import { useAuth } from "../hooks";
 
-export const PrivateRoute = ({ children }) => {
-  const { logged } = useContext(AuthContext);
+interface props {
+  children: JSX.Element | JSX.Element[];
+}
+
+export const PrivateRoute = ({ children }: props) => {
+  const { logged } = useAuth();
   const { pathname, search } = useLocation();
 
   const lastPath = pathname + search;

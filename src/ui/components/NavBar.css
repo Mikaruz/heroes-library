@@ -1,17 +1,18 @@
 .nav-container {
-  font-family: "Lato", sans-serif;
-  font-weight: normal;
-  font-size: large;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: #f5f5f5;
   padding: 20px 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
-.routes {
+.nav-routes {
+  font-family: "Lato", sans-serif;
   background-color: #f5f5f5;
   text-decoration: none;
+  font-weight: normal;
+  font-size: large;
   color: black;
   display: flex;
   justify-content: space-between;
@@ -21,16 +22,18 @@
   font-weight: bold;
 }
 
-.nav-container button {
+.nav-button {
   border: none;
   outline: none;
   box-shadow: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   background-color: #f5f5f5;
 }
 
-.nav-container span {
+.nav-routes span,
+.nav-button span {
   background-color: #f5f5f5;
 }

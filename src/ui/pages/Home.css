@@ -1,0 +1,18 @@
+.home-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.home-title .welcome {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: x-large;
+}
+
+.home-title .name {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: x-large;
+}

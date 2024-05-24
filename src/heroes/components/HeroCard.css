@@ -1,0 +1,28 @@
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-card .hero-image {
+  width: 15rem;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-card .hero-name {
+  font-family: "Lato", sans-serif;
+  background: none;
+  margin-top: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+.hero-card .hero-subname {
+  font-family: "Lato", sans-serif;
+  background: none;
+  text-align: center;
+  font-weight: 500;
+  font-size: medium;
+}

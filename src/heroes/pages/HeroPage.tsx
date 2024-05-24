@@ -1,11 +1,10 @@
-import { Navigate, useNavigate, useParams } from "react-router-dom";
-import { getHeroById } from "../helpers/getHeroById";
-import "./styles.css";
 import { useMemo } from "react";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { getHeroById } from "../helpers";
+import "./HeroPage.css";
 
-export const Hero = () => {
+export const HeroPage = () => {
   const { id } = useParams();
-
   const hero = useMemo(() => getHeroById(id!), [id]);
   const navigate = useNavigate();
 
@@ -18,9 +17,9 @@ export const Hero = () => {
   const imageUrl: string = `/assets/heroes/${id}.jpg`;
 
   return (
-    <>
+    <div className="layout">
       <div className="hero-container">
-        <img src={imageUrl} alt={id} />
+        <img className="hero-image" src={imageUrl} alt={id} />
 
         <div className="information">
           <h1>{hero.superhero}</h1>
@@ -44,6 +43,6 @@ export const Hero = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };

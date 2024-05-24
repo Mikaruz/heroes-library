@@ -1,17 +1,23 @@
 import { useMemo } from "react";
-import { getHeroesByPublisher } from "../helpers/getHeroesByPublisher";
 import { HeroCard } from "./HeroCard";
-import "./styles.css";
+import { getHeroesByPublisher, sortHeroesByName } from "../helpers";
+import "./HeroList.css";
 
 type HeroListProps = {
-  publisher: string;
+  publisher?: string;
 };
 
 export const HeroList = ({ publisher }: HeroListProps) => {
-  const heroes = useMemo(() => getHeroesByPublisher(publisher), [publisher]);
+  const heroes = useMemo(() => {
+    if (publisher !== undefined) {
+      return getHeroesByPublisher(publisher);
+    } else {
+      return sortHeroesByName();
+    }
+  }, [publisher]);
 
   return (
-    <div className="card-container">
+    <div className="list-container">
       {heroes.map((hero) => (
         <HeroCard key={hero.id} {...hero} />
       ))}
