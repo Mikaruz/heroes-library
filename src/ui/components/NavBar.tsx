@@ -26,9 +26,6 @@ export const NavBar = () => {
       <NavLink className="nav-routes" to="/dc">
         DC
       </NavLink>
-      <NavLink className="nav-routes" to="/search">
-        <span className="material-symbols-outlined">search</span>
-      </NavLink>
       <button className="nav-button" onClick={onLogout}>
         <span className="material-symbols-outlined">logout</span>
       </button>
