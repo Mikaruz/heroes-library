@@ -5,6 +5,15 @@
   gap: 0.5rem;
 }
 
+.home-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
 .home-title .welcome {
   font-family: "Lato", sans-serif;
   font-weight: 500;
@@ -26,33 +35,34 @@
 }
 
 .search-container {
+  position: relative;
   display: flex;
-  padding: 1rem 50px;
+  align-items: center;
 }
 
 .search-container input[type="text"] {
   font-family: "Lato", sans-serif;
-  text-decoration: none;
-  font-size: 1rem;
-  color: black;
-  background-color: white;
   width: 100%;
-  padding: 12px 20px;
-  border: 2px solid black;
+  padding: 10px 10px 10px 40px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.search-container input:focus {
   outline: none;
 }
 
-.search-container button {
-  padding: 10px 10px;
-  outline: none;
-  border: none;
-  background: black;
-  cursor: pointer;
-}
-
-.search-container button span {
-  color: white;
-  background-color: transparent;
+.search-container span {
+  position: absolute;
+  left: 10px;
+  font-size: 24px;
+  color: #888;
 }
 
 .search-layout .error {
